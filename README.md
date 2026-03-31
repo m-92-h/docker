@@ -1,5 +1,6 @@
  # All Docker commands 🐳
- <br><br>
+
+ 
  ## 📥 Images
  ```images
   docker pull nginx              # تحميل image من Docker Hub
@@ -13,7 +14,8 @@
   docker push myapp:v1           # رفع image إلى Docker Hub
   docker search redis            # البحث عن image في Hub
  ```
-<br>
+
+
  ## 🔨 Build Images
  ```build
   docker build .                        # بناء image من الـ Dockerfile
@@ -23,7 +25,8 @@
   docker build --no-cache .             # بناء بدون cache
   docker build --build-arg ENV=prod .   # تمرير متغير أثناء البناء
  ```
-<br>
+
+
  ## 🚀 Run — Containers
  ```run-containers
   docker run nginx                      # تشغيل container
@@ -39,7 +42,8 @@
   docker run --memory=512m nginx        # تحديد الذاكرة القصوى
   docker run --cpus=1 nginx             # تحديد عدد الـ CPU
  ```
- <br>
+
+ 
  ## 📋 Manage — Containers
  ```
   docker ps                        # عرض الـ containers الشغالة
@@ -55,7 +59,8 @@
   docker pause myapp               # تجميد container مؤقتاً
   docker unpause myapp             # استئناف container مجمد
  ```
- <br>
+
+ 
  ## 🔍 Inspect — مراقبة وتشخيص
  ```
   docker logs myapp              # عرض السجلات
@@ -69,7 +74,8 @@
   docker diff myapp              # الملفات التي تغيرت
   docker events                  # مراقبة أحداث Docker لحظياً
  ```
- <br>
+
+ 
  ## ⚡ Exec — الدخول والتنفيذ 
  ```
   docker exec -it myapp bash           # الدخول للـ container بـ bash
@@ -78,7 +84,8 @@
   docker cp myapp:/app/file.txt .      # نسخ ملف من container للجهاز
   docker cp file.txt myapp:/app/       # نسخ ملف من الجهاز للـ container
  ```
- <br>
+
+ 
  ## 💾 Volumes 
  ```
   docker volume create mydata         # إنشاء volume جديد
@@ -88,7 +95,8 @@
   docker volume prune                 # حذف الـ volumes غير المستخدمة
   docker run -v mydata:/app/data nginx # استخدام volume في container
  ```
- <br>
+
+ 
  ## 🌐 Network
  ```
   docker network create mynet             # إنشاء شبكة جديدة
@@ -100,7 +108,8 @@
   docker network connect mynet myapp      # ربط container بشبكة
   docker network disconnect mynet myapp   # فصل container من شبكة
  ```
-<br>
+
+
  ## 📦 Docker Compose
  ```
   docker compose up              # تشغيل كل الـ services
@@ -119,7 +128,8 @@
   docker compose start           # تشغيل services متوقفة
   docker compose config          # التحقق من صحة الملف
  ```
-<br>
+
+ 
  ## 🛠️ System 
  ```
   docker system df             # عرض استهلاك المساحة
