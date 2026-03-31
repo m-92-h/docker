@@ -1,7 +1,7 @@
- # All Docker commands 🐳
+ ## All Docker commands 🐳
 
  
- ## 📥 Images
+ ### 📥 Images
  ```images
   docker pull nginx              # تحميل image من Docker Hub
   docker pull nginx:1.25         # تحميل إصدار محدد
@@ -16,7 +16,7 @@
  ```
 
 
- ## 🔨 Build Images
+ ### 🔨 Build Images
  ```build
   docker build .                        # بناء image من الـ Dockerfile
   docker build -t myapp .               # بناء مع تسمية
@@ -27,7 +27,7 @@
  ```
 
 
- ## 🚀 Run — Containers
+ ### 🚀 Run — Containers
  ```run-containers
   docker run nginx                      # تشغيل container
   docker run -d nginx                   # تشغيل في الخلفية
@@ -44,7 +44,7 @@
  ```
 
  
- ## 📋 Manage — Containers
+ ### 📋 Manage — Containers
  ```
   docker ps                        # عرض الـ containers الشغالة
   docker ps -a                     # عرض كل الـ containers
@@ -61,7 +61,7 @@
  ```
 
  
- ## 🔍 Inspect — مراقبة وتشخيص
+ ### 🔍 Inspect — مراقبة وتشخيص
  ```
   docker logs myapp              # عرض السجلات
   docker logs -f myapp           # متابعة السجلات لحظياً
@@ -76,7 +76,7 @@
  ```
 
  
- ## ⚡ Exec — الدخول والتنفيذ 
+ ### ⚡ Exec — الدخول والتنفيذ 
  ```
   docker exec -it myapp bash           # الدخول للـ container بـ bash
   docker exec -it myapp sh             # الدخول بـ sh (للـ Alpine)
@@ -86,7 +86,7 @@
  ```
 
  
- ## 💾 Volumes 
+ ### 💾 Volumes 
  ```
   docker volume create mydata         # إنشاء volume جديد
   docker volume ls                    # عرض كل الـ volumes
@@ -97,7 +97,7 @@
  ```
 
  
- ## 🌐 Network
+ ### 🌐 Network
  ```
   docker network create mynet             # إنشاء شبكة جديدة
   docker network ls                       # عرض كل الشبكات
@@ -110,7 +110,7 @@
  ```
 
 
- ## 📦 Docker Compose
+ ### 📦 Docker Compose
  ```
   docker compose up              # تشغيل كل الـ services
   docker compose up -d           # تشغيل في الخلفية
@@ -130,7 +130,7 @@
  ```
 
  
- ## 🛠️ System 
+ ### 🛠️ System 
  ```
   docker system df             # عرض استهلاك المساحة
   docker system prune          # حذف كل غير المستخدم
