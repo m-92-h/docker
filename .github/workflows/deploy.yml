@@ -1,0 +1,25 @@
+name: Build and Push to Docker Hub
+
+on:
+  push:
+    branches: [ "main" ] # سيعمل الأكشن تلقائياً عند أي Push لفرع main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4 # سحب الكود من جيت هاب
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3 # تسجيل الدخول لدوكر هب باستخدام المفاتيح
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Build and Push Image
+        uses: docker/build-push-action@v5 # بناء ورفع الصورة في خطوة واحدة
+        with:
+          context: .
+          push: true
+          tags: mohamedht/guestbook # اسم صورتك والـ Tag
