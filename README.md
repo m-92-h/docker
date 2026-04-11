@@ -1,3 +1,20 @@
+## General Information
+
+#### Upload without code and without comment
+```
+git commit --allow-empty --allow-empty-message -m ""
+```
+
+#### To generate a secret code instantly
+```
+node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
+```
+
+#### Display the clean file tree for the project, excluding files such as (node_modules, .next, .git).
+```
+find . -not -path "*/node_modules/*" -not -path "*/.next/*" -not -path "*/.git/*" | sort
+```
+
  ## All Docker commands 🐳
 
  
