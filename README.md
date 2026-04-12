@@ -1,26 +1,28 @@
 ## General Information
 
-#### Upload without code and without comment
+> Upload without code and without comment
 ```
 git commit --allow-empty --allow-empty-message -m ""
 ```
 
-#### To generate a secret code instantly
+> To generate a secret code instantly
 ```
 node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
 ```
 
-#### Display the clean file tree for the project, excluding files such as (node_modules, .next, .git).
+> Display the clean file tree for the project, excluding files such as (node_modules, .next, .git).
 ```
 find . -not -path "*/node_modules/*" -not -path "*/.next/*" -not -path "*/.git/*" | sort
 ```
 ```
 find . -not -path './node_modules/*' -not -path './.git/*' | sort
 ```
+---
+
  ## All Docker commands 🐳
 
  
- ### 📥 Images
+ > 📥 Images
  ```images
   docker pull nginx              # تحميل image من Docker Hub
   docker pull nginx:1.25         # تحميل إصدار محدد
@@ -35,7 +37,7 @@ find . -not -path './node_modules/*' -not -path './.git/*' | sort
  ```
 
 
- ### 🔨 Build Images
+ > 🔨 Build Images
  ```build
   docker build .                        # بناء image من الـ Dockerfile
   docker build -t myapp .               # بناء مع تسمية
@@ -46,7 +48,7 @@ find . -not -path './node_modules/*' -not -path './.git/*' | sort
  ```
 
 
- ### 🚀 Run — Containers
+ > 🚀 Run — Containers
  ```run-containers
   docker run nginx                      # تشغيل container
   docker run -d nginx                   # تشغيل في الخلفية
@@ -63,7 +65,7 @@ find . -not -path './node_modules/*' -not -path './.git/*' | sort
  ```
 
  
- ### 📋 Manage — Containers
+ > 📋 Manage — Containers
  ```
   docker ps                        # عرض الـ containers الشغالة
   docker ps -a                     # عرض كل الـ containers
@@ -80,7 +82,7 @@ find . -not -path './node_modules/*' -not -path './.git/*' | sort
  ```
 
  
- ### 🔍 Inspect — مراقبة وتشخيص
+ > 🔍 Inspect — مراقبة وتشخيص
  ```
   docker logs myapp              # عرض السجلات
   docker logs -f myapp           # متابعة السجلات لحظياً
@@ -95,7 +97,7 @@ find . -not -path './node_modules/*' -not -path './.git/*' | sort
  ```
 
  
- ### ⚡ Exec — الدخول والتنفيذ 
+ > ⚡ Exec — الدخول والتنفيذ 
  ```
   docker exec -it myapp bash           # الدخول للـ container بـ bash
   docker exec -it myapp sh             # الدخول بـ sh (للـ Alpine)
@@ -105,7 +107,7 @@ find . -not -path './node_modules/*' -not -path './.git/*' | sort
  ```
 
  
- ### 💾 Volumes 
+ > 💾 Volumes 
  ```
   docker volume create mydata         # إنشاء volume جديد
   docker volume ls                    # عرض كل الـ volumes
@@ -116,7 +118,7 @@ find . -not -path './node_modules/*' -not -path './.git/*' | sort
  ```
 
  
- ### 🌐 Network
+ > 🌐 Network
  ```
   docker network create mynet             # إنشاء شبكة جديدة
   docker network ls                       # عرض كل الشبكات
@@ -129,7 +131,7 @@ find . -not -path './node_modules/*' -not -path './.git/*' | sort
  ```
 
 
- ### 📦 Docker Compose
+ > 📦 Docker Compose
  ```
   docker compose up              # تشغيل كل الـ services
   docker compose up -d           # تشغيل في الخلفية
@@ -149,7 +151,7 @@ find . -not -path './node_modules/*' -not -path './.git/*' | sort
  ```
 
  
- ### 🛠️ System 
+ > 🛠️ System 
  ```
   docker system df             # عرض استهلاك المساحة
   docker system prune          # حذف كل غير المستخدم
